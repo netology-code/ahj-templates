@@ -3,18 +3,18 @@
 Набор шаблонов для проведения лекций по AHJ
 
 Содержание:
-* [Рабочее окружение](/workspace)
-* [DOM](/dom)
-* [Events](/events)
-* [Testing](/testing)
-* [Forms](/forms)
-* [DnD](/dnd)
-* [HTTP](/http)
-* [Animations](/anim)
-* [Geolocation, Notification, Media](/geo)
-* [RxJS](/rxjs)
-* [SSE, WS](/sse-ws)
-* [Web Workers, Service Workers](/workers)
+* [x] [Рабочее окружение](/workspace)
+* [x] [DOM](/dom)
+* [x] [Events](/events)
+* [ ] [Testing](/testing)
+* [ ] [Forms](/forms)
+* [ ] [DnD](/dnd)
+* [ ] [HTTP](/http)
+* [ ] [Animations](/anim)
+* [ ] [Geolocation, Notification, Media](/geo)
+* [ ] [RxJS](/rxjs)
+* [ ] [SSE, WS](/sse-ws)
+* [ ] [Web Workers, Service Workers](/workers)
 
 По всем вопросам обращайтесь к @coursar.
 
