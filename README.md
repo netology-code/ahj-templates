@@ -7,7 +7,7 @@
 * [x] [Рабочее окружение](/workspace)
 * [x] [DOM](/dom)
 * [x] [Events](/events)
-* [ ] [Testing](/testing)
+* [x] [Testing](/testing)
 * [ ] [Forms](/forms)
 * [ ] [DnD](/dnd)
 * [ ] [HTTP](/http)
