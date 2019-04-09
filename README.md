@@ -8,7 +8,7 @@
 * [x] [DOM](/dom)
 * [x] [Events](/events)
 * [x] [Testing](/testing)
-* [ ] [Forms](/forms)
+* [x] [Forms](/forms)
 * [ ] [DnD](/dnd)
 * [ ] [HTTP](/http)
 * [ ] [Animations](/anim)
