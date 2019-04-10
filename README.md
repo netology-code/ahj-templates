@@ -13,7 +13,7 @@
 * [ ] [HTTP](/http)
 * [ ] [Animations](/anim)
 * [ ] [Geolocation, Notification, Media](/geo)
-* [ ] [RxJS](/rxjs)
+* [x] [RxJS](/rxjs)
 * [ ] [SSE, WS](/sse-ws)
 * [ ] [Web Workers, Service Workers](/workers)
 
