@@ -10,7 +10,7 @@
 * [x] [Testing](/testing)
 * [x] [Forms](/forms)
 * [x] [DnD](/dnd)
-* [ ] [HTTP](/http)
+* [x] [HTTP](/http)
 * [ ] [Animations](/anim)
 * [ ] [Geolocation, Notification, Media](/geo)
 * [x] [RxJS](/rxjs)
