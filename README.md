@@ -11,7 +11,7 @@
 * [x] [Forms](/forms)
 * [x] [DnD](/dnd)
 * [x] [HTTP](/http)
-* [ ] [Animations](/anim)
+* [x] [Animations](/anim)
 * [ ] [Geolocation, Notification, Media](/geo)
 * [x] [RxJS](/rxjs)
 * [ ] [SSE, WS](/sse-ws)
