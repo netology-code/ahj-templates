@@ -110,6 +110,7 @@ const app = new Koa();
 // router.post('/contacts', async (ctx, next) => {
 //   // create new contact
 //   contacts.push({...ctx.request.body, id: uuid.v4()});
+//   ctx.response.status = 204
 // });
 // router.delete('/contacts/:id', async (ctx, next) => {
 //   // remove contact by id (ctx.params.id)
@@ -117,6 +118,7 @@ const app = new Koa();
 //   if (index !== -1) {
 //     contacts.splice(index, 1);
 //   };
+//   ctx.response.status = 204
 // });
 
 // app.use(router.routes()).use(router.allowedMethods());
