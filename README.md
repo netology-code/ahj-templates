@@ -12,7 +12,7 @@
 * [x] [DnD](/dnd)
 * [x] [HTTP](/http)
 * [x] [Animations](/anim)
-* [ ] [Geolocation, Notification, Media](/geo)
+* [x] [Geolocation, Notification, Media](/geo)
 * [x] [RxJS](/rxjs)
 * [ ] [SSE, WS](/sse-ws)
 * [ ] [Web Workers, Service Workers](/workers)
