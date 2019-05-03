@@ -15,7 +15,7 @@
 * [x] [Geolocation, Notification, Media](/geo)
 * [x] [RxJS](/rxjs)
 * [x] [SSE, WS](/sse-ws)
-* [ ] [Web Workers, Service Workers](/workers)
+* [x] [Web Workers, Service Workers](/workers)
 
 По всем вопросам обращайтесь к @coursar.
 
