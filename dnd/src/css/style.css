@@ -25,6 +25,13 @@ p {
     text-align: center;
 }
 
+.text-preview {
+    height: 200px;
+    width: 100%;
+    border: 1px dashed black;
+    border-radius: 5px;
+}
+
 .drop-area {
     height: 200px;
     width: 100%;

@@ -3,6 +3,7 @@
 const fileEl = document.querySelector('.overlapped');
 const overlapEl = document.querySelector('.overlap');
 const previewEl = document.querySelector('[data-id=preview]');
+const textPreviewEl = document.querySelector('[data-id=text-preview]')
 
 overlapEl.addEventListener('click', () => {
   fileEl.dispatchEvent(new MouseEvent('click'));
@@ -10,19 +11,39 @@ overlapEl.addEventListener('click', () => {
 
 fileEl.addEventListener('change', (evt) => {
   const files = Array.from(evt.currentTarget.files);
-  previewEl.src = URL.createObjectURL(files[0]);
-  previewEl.addEventListener('load', () => {
-    URL.revokeObjectURL(previewEl.src);
-  });
 
   const file = files[0];
-  const a = document.createElement('a');
-  a.download = file.name;
-  a.href = URL.createObjectURL(file);
-  a.rel = 'noopener';
-  setTimeout(() => URL.revokeObjectURL(a.href), 60000);
-  setTimeout(() => a.dispatchEvent(new MouseEvent('click')));
+
+  if (file.type.startsWith('image/')) {
+    previewEl.src = URL.createObjectURL(file);
+    previewEl.addEventListener('load', () => {
+      URL.revokeObjectURL(previewEl.src);
+    });
+
+    const a = document.createElement('a');
+    a.download = file.name;
+    a.href = URL.createObjectURL(file);
+    console.log(a.href);
+    a.rel = 'noopener';
+    setTimeout(() => URL.revokeObjectURL(a.href), 60000);
+    setTimeout(() => a.dispatchEvent(new MouseEvent('click')));
+  } else if (file.type.startsWith('text/')) {
+    readFile(file).then(data => textPreviewEl.value = data);
+  }
 });
+
+function readFile(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.addEventListener('load', (evt) => {
+      resolve(evt.target.result);
+    });
+    reader.addEventListener('error', (evt) => {
+      reject(evt.target.error);
+    });
+    reader.readAsText(file);
+  });
+}
 
 const dropEl = document.querySelector('[data-id=drop-area]');
 
