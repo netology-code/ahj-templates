@@ -37,9 +37,7 @@ app.use(async (ctx, next) => {
 const Router = require('koa-router');
 const router = new Router();
 
-router.get('/index', async (ctx) => {
-  ctx.response.body = 'hello';
-});
+// TODO: write code here
 
 app.use(router.routes()).use(router.allowedMethods());
 
