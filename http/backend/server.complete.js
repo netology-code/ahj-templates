@@ -29,7 +29,7 @@ const app = new Koa();
 //       throw e;
 //     }
 //   }
-  
+
 //   if (ctx.request.get('Access-Control-Request-Method')) {
 //     ctx.response.set({
 //       ...headers,
@@ -55,7 +55,7 @@ const app = new Koa();
 // => GET/POST
 // const subscriptions = new Map();
 // app.use(async ctx => {
-//   const { name, phone } = ctx.request.querystring; 
+//   const { name, phone } = ctx.request.querystring;
 //   // const { name, phone } = ctx.request.body;  // for POST
 
 //   if (subscriptions.has(phone)) {
@@ -70,7 +70,7 @@ const app = new Koa();
 
 // => File Uploading
 // app.use(async ctx => {
-//   const { name } = ctx.request; 
+//   const { name } = ctx.request;
 //   const { file } = ctx.request.files;
 //   const link = await new Promise((resolve, reject) => {
 //     const oldPath = file.path;
@@ -96,32 +96,6 @@ const app = new Koa();
 
 //   ctx.response.body = link;
 // });
-
-// => REST
-// const Router = require('koa-router');
-// const router = new Router();
-// const contacts = [];
-
-// router.get('/contacts', async (ctx, next) => {
-//   // return list of contacts
-//   console.log('contacts');
-//   ctx.response.body = contacts;
-// });
-// router.post('/contacts', async (ctx, next) => {
-//   // create new contact
-//   contacts.push({...ctx.request.body, id: uuid.v4()});
-//   ctx.response.status = 204
-// });
-// router.delete('/contacts/:id', async (ctx, next) => {
-//   // remove contact by id (ctx.params.id)
-//   const index = contacts.findIndex(({ id }) => id === ctx.params.id);
-//   if (index !== -1) {
-//     contacts.splice(index, 1);
-//   };
-//   ctx.response.status = 204
-// });
-
-// app.use(router.routes()).use(router.allowedMethods());
 
 const port = process.env.PORT || 7070;
 http.createServer(app.callback()).listen(port)

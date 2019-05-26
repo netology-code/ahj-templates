@@ -1,6 +1,8 @@
 const http = require('http');
 const Koa = require('koa');
+const Router = require('koa-router');
 const WS = require('ws');
+
 const app = new Koa();
 
 app.use(async (ctx, next) => {
@@ -35,7 +37,6 @@ app.use(async (ctx, next) => {
   }
 });
 
-const Router = require('koa-router');
 const router = new Router();
 
 router.get('/index', async (ctx) => {

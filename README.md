@@ -11,10 +11,10 @@
 * [x] [Forms](/forms)
 * [x] [DnD](/dnd)
 * [x] [HTTP](/http)
+* [x] [SSE, WS](/sse-ws)
 * [x] [Animations](/anim)
 * [x] [Geolocation, Notification, Media](/geo)
 * [x] [RxJS](/rxjs)
-* [x] [SSE, WS](/sse-ws)
 * [x] [Web Workers, Service Workers](/workers)
 
 По всем вопросам обращайтесь к @coursar.

@@ -1,9 +1,8 @@
 const http = require('http');
 const Koa = require('koa');
 const Router = require('koa-router');
-const { streamEvents } = require('http-event-stream');
+const koaBody = require('koa-body');
 const uuid = require('uuid');
-
 const app = new Koa();
 
 app.use(async (ctx, next) => {
@@ -38,31 +37,33 @@ app.use(async (ctx, next) => {
   }
 });
 
+app.use(koaBody({
+  text: true,
+  urlencoded: true,
+  multipart: true,
+  json: true,
+}));
+
+const contacts = [];
 const router = new Router();
 
-router.get('/sse', async (ctx) => {
-  streamEvents(ctx.req, ctx.res, {
-    async fetch() {
-      return [];
-    },
-    stream(sse) {
-      const interval = setInterval(() => {
-        sse.sendEvent({
-          id: uuid.v4(),
-          data: JSON.stringify({field: 'value'}),
-          event: 'comment'
-        });
-      }, 5000);
-
-      return () => clearInterval(interval);
-    }
-  });
-
-  ctx.respond = false; // koa не будет обрабатывать ответ
+router.get('/contacts', async (ctx, next) => {
+  // return list of contacts
+  console.log('contacts');
+  ctx.response.body = contacts;
 });
-
-router.get('/index', async (ctx) => {
-  ctx.response.body = 'hello';
+router.post('/contacts', async (ctx, next) => {
+  // create new contact
+  contacts.push({...ctx.request.body, id: uuid.v4()});
+  ctx.response.status = 204
+});
+router.delete('/contacts/:id', async (ctx, next) => {
+  // remove contact by id (ctx.params.id)
+  const index = contacts.findIndex(({ id }) => id === ctx.params.id);
+  if (index !== -1) {
+    contacts.splice(index, 1);
+  };
+  ctx.response.status = 204
 });
 
 app.use(router.routes()).use(router.allowedMethods());
