@@ -1,4 +1,4 @@
-import Worker from './web-worker';
+import Worker from './web.worker';
 
 const fileEl = document.querySelector('[data-id=file-input]');
 const resultEl = document.querySelector('[data-id=result-text]');

@@ -21,7 +21,7 @@ module.exports = {
   },
   "overrides": [
     {
-      "files": ["*-worker.js"],
+      "files": ["*.worker.js"],
       "rules": {
         "no-restricted-globals": noRestrictedGlobalsWorker
       }
