@@ -11,11 +11,11 @@
   "author": "coursar",
   "license": "ISC",
   "dependencies": {
-    "forever": "^1.0.0",
-    "koa": "^2.7.0",
-    "koa-body": "^4.1.0",
+    "forever": "^2.0.0",
+    "koa": "^2.11.0",
+    "koa-body": "^4.1.1",
     "koa-static": "^5.0.0",
-    "uuid": "^3.3.2"
+    "uuid": "^3.4.0"
   },
   "engines": {
     "node": "10.x"
