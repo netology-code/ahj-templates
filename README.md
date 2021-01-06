@@ -1,6 +1,6 @@
 # Шаблоны для лекций AHJ
 
-**Важно**: это старый репозиторий, используйте [ahj-code](github.com/netology-code/ahj-code).
+**Важно**: это старый репозиторий, используйте [ahj-code](https://github.com/netology-code/ahj-code).
 
 Набор шаблонов для проведения лекций по AHJ
 
